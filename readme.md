@@ -60,3 +60,8 @@ Our contract needs methods to:
 4. Match patient with provider 
 We don't track Provider or Patient and just use GUIDS.
 
+# Install Chain code
+cd /mnt/
+git clone https://github.com/SameerDoshi/blockchainstarter.git
+cd /mnt/fabric-samples/test-network/
+./network.sh deployCC -ccn vaccineConract -ccl javascript -ccp /mnt/blockchainstarter/contract/
