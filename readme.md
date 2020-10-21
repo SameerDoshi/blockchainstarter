@@ -28,6 +28,8 @@ node app.js
 
 # Vaccine Sample
 
+Based off of [Commercial Paper](https://github.com/hyperledger/fabric-samples/blob/master/commercial-paper/organization/digibank/contract/ledger-api/statelist.js)
+
 In our sample we'll use blockchain to allow the general public to verify a person has been given two does of a vaccine
 
 Organizations:
