@@ -76,7 +76,7 @@ class VaccineContract extends Contract {
         vaccine.provider=provider;
 
         // Update the paper
-        let data = vaccine.serialize();
+         data = vaccine.serialize();
         await this.ctx.stub.putState(vaccineKey, data);
         return vaccine;
     }
@@ -98,7 +98,7 @@ class VaccineContract extends Contract {
         vaccine.patient=patient;
 
         // Update the paper
-        let data = vaccine.serialize();
+        data = vaccine.serialize();
         await this.ctx.stub.putState(vaccineKey, data);
         return vaccine;
     }
