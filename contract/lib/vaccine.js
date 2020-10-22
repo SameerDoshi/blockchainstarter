@@ -3,7 +3,6 @@
 class Vaccine {
 
     constructor(meta) {
-        super();
         let created=Date.now();
         this.id=meta.id;
         this.batch=created + meta.batch;
