@@ -47,10 +47,13 @@ class VaccineContract extends Contract {
     async create(ctx, id, batch) {
 
         
-        let vaccine = new Vaccine({id:id,batch:batch});
-
+        let vaccine = new Vaccine();
+        vaccine.id=id;
+        vaccine.batch=batch;
+        console.log(vaccine);
         // Add the paper to the list of all similar commercial papers in the ledger world state
         let key = ctx.stub.createCompositeKey("org.contoso.vaccine", id);
+        console.log("Key:"+key);
         let data = vaccine.serialize();
         await ctx.stub.putState(key, data);
         

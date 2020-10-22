@@ -56,7 +56,7 @@ async function main () {
         // Get addressability to commercial paper contract
         console.log('Use org.contoso.vaccine smart contract.');
 
-        const contract = await network.getContract('vaccineConract1', 'org.contoso.vaccine');
+        const contract = await network.getContract('vaccineConract3', 'org.contoso.vaccine');
 
         // buy commercial paper
         console.log('Create new vaccine transaction.');
