@@ -47,7 +47,7 @@ class VaccineContract extends Contract {
     async create(ctx, id, batch) {
 
         
-        let vaccine = new Vaccine();
+        let vaccine = new Vaccine({id:id,batch:batch});
         vaccine.id=id;
         vaccine.batch=batch;
         console.log(vaccine);
