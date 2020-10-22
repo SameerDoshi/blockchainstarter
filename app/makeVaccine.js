@@ -21,8 +21,7 @@ const VaccineContract = require('../contract/lib/contract.js');
 async function main () {
 
     // A wallet stores a collection of identities for use
-    const wallet = await Wallets.newFileSystemWallet('../identity/user/balaji/wallet');
-
+    const wallet = await Wallets.newFileSystemWallet('../identity/user/isabella/wallet');
 
     // A gateway defines the peers used to access Fabric networks
     const gateway = new Gateway();
@@ -31,10 +30,10 @@ async function main () {
     try {
 
         // Specify userName for network access
-        const userName = 'balaji';
+        const userName = 'isabella';
 
         // Load connection profile; will be used to locate a gateway
-        let connectionProfile = yaml.safeLoad(fs.readFileSync('./connection-org1.yaml', 'utf8'));
+        let connectionProfile = yaml.safeLoad(fs.readFileSync('./connection-org2.yaml', 'utf8'));
 
         // Set connection options; identity and wallet
         let connectionOptions = {
@@ -57,7 +56,7 @@ async function main () {
         // Get addressability to commercial paper contract
         console.log('Use org.contoso.vaccine smart contract.');
 
-        const contract = await network.getContract('vaccineConract', 'org.contoso.vaccine');
+        const contract = await network.getContract('vaccineConract1', 'org.contoso.vaccine');
 
         // buy commercial paper
         console.log('Create new vaccine transaction.');
